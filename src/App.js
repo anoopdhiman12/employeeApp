@@ -5,6 +5,7 @@ import firebase from 'firebase'
 import ReduxThunk from 'redux-thunk'
 import reducers from './reducers'
 import LoginForm from './components/LoginForm'
+import { View, SafeAreaView } from 'react-native'
 
 class App extends Component {
   componentWillMount () {
@@ -24,8 +25,10 @@ class App extends Component {
     const store = createStore(reducers, {}, applyMiddleware(ReduxThunk))
     return (
       <Provider store={store}>
+      <SafeAreaView>
         <LoginForm/>
-      </Provider>
+        </SafeAreaView>
+      </Provider>      
     )
   }
 }
