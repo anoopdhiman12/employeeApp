@@ -12,8 +12,10 @@ class LoginForm extends Component {
   }
 
   onButtonPress(){
-    const {email, password } = this.props;
-    this.props.loginUser( {email,password })
+    const { email, password } = this.props;
+console.log("my password",password);
+
+    this.props.loginUser( email, password )
   }
   render () {
     return (
@@ -48,5 +50,10 @@ const mapStateToProps = state => {
     password: state.auth.password
   }
 }
+
+// const mapDispatchToProps = dispatch => ({
+//   sendMessage: message => dispatch(sendMessage(message)),
+//   deleteMessage: id => dispatch(deleteMessage(id)),
+// })
 
 export default connect(mapStateToProps, { emailChanged, passwordChanged, loginUser } )(LoginForm);
