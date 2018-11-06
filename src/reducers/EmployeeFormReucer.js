@@ -1,4 +1,4 @@
-import { EMPLOYEE_UPDATE} from '../actions/index'
+import { EMPLOYEE_UPDATE } from '../actions/types'
 import { Actions } from 'react-native-router-flux';
 
 
