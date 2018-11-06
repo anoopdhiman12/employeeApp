@@ -6,6 +6,8 @@ import ReduxThunk from 'redux-thunk'
 import reducers from './reducers'
 import LoginForm from './components/LoginForm'
 import { View, SafeAreaView } from 'react-native'
+import Router from './Router'
+
 
 class App extends Component {
   componentWillMount () {
@@ -25,10 +27,9 @@ class App extends Component {
     const store = createStore(reducers, {}, applyMiddleware(ReduxThunk))
     return (
       <Provider store={store}>
-      <SafeAreaView>
-        <LoginForm/>
-        </SafeAreaView>
+        <Router/>
       </Provider>      
+
     )
   }
 }
