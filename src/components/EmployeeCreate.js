@@ -5,8 +5,6 @@ import { Picker, Text } from 'react-native'
 
 import { employeeUpdate, employeeCreate } from '../actions'
 
-
-
 class EmployeeCreate extends Component {
 
     onButtonPress() {
@@ -67,4 +65,4 @@ const mapStateToProps = (state) => {
     return { name, phone, shift }
 }
 
-export default connect(mapStateToProps, { employeeUpdate })(EmployeeCreate)
+export default connect(mapStateToProps, { employeeUpdate,employeeCreate})(EmployeeCreate)
